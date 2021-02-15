@@ -1,0 +1,55 @@
+<html>
+
+<head>
+  <meta charset='UTF-8'>
+  </meta>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav {
+      width: 500px;
+      height: 500px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 25px;
+    }
+
+    input:focus {
+      background-color: pink;
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <h1>Expense Tracker</h1>
+    <h2>New Expense</h2>
+    <form action="insert.php" method="post">
+      <label for="category">Choose a Category:</label>
+      <select name="category" id="category">
+        <option value="grocery">Grocery</option>
+        <option value="car">Car</option>
+        <option value="heat">Heat</option>
+        <option value="electricity">Electricity</option>
+        <option value="phone">Phone</option>
+      </select>
+      <br><br>
+      Expense Amount:<br>
+      <input type="number" id="price" name="price" step="0.01"><br><br>
+      Expense Date：<br>
+      <input type="date" name="purdate" /><br><br>
+      <input type=submit value="Submit" />
+    </form>
+    <br><br><br><br>
+    <form action="select.php">
+    <input type=submit value="Check All Existing Expense Record" />
+    </form>
+  </div>
+</body>
+
+</html>
+
