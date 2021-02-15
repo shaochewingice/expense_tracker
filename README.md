@@ -6,7 +6,7 @@ This web app helps user to record and keep track of daily expenses. It is implem
 
 ## Structure Diagram
 
-![](E:\fsdownload\ExpenseTracker\docker\my_lnmp\structure.png)
+![](structure.png)
 
 ## Detailed Design
 
@@ -28,12 +28,12 @@ This web app helps user to record and keep track of daily expenses. It is implem
 5. In the project directory, simply run command:
 
    ```shell
-   $ sudo docker-compose upAA
+   $ sudo docker-compose up
    ```
 
 ## Access
 
 ​	Access the web app by opening a web browser and type in the url `http://<server-ip>:8080` 
 
-​	![](E:\fsdownload\ExpenseTracker\docker\my_lnmp\expense_tracker.png)
+​	![](expense_tracker.png)
 
