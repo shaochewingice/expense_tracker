@@ -10,7 +10,7 @@ This web app helps user to record and keep track of daily expenses. It is implem
 
 ## Detailed Design
 
-1. Nginx handles the client request and make appropriate response through exposed port 8080.
+1. Nginx handles the client request and make appropriate response through exposed port 443 (https).
 2. PHP-FPM is the middleware that receive actions from front-end Nginx to perform data entry and data query to back-end database MariaDB.
 3. Both Nginx and PHP-FPM container are mounted to source code directory on the hose machine, so that Nginx can handle the static contents such as html files, while PHP-FPM will handle the dynamic contents - php scripts; also developer can access and test the source code without going into each container. 
 4. MariaDB will store the data and mount the data content in the host machine.
@@ -23,7 +23,7 @@ This web app helps user to record and keep track of daily expenses. It is implem
 
 3. install docker and docker-compose
 
-4. make sure firewalld allows port 8080 and 3306
+4. make sure firewalld allows port 443 and 3306
 
 5. In the project directory, simply run command:
 
@@ -33,10 +33,12 @@ This web app helps user to record and keep track of daily expenses. It is implem
 
 ## Access
 
-​	Access the web app by opening a web browser and type in the url `http://<server-ip>:8080` 
+​	Access the web app by opening a web browser and type in the url `https://<server-ip>` 
 
 ​	![](expense_tracker.png)
 
 ## Update
 
-July 1, 2021 - upgrade php from version 5.4 to 7.4, and associated php scripts to accommodate php 7.4 to mysql connection changes.
+July 1, 2021 
+  - upgrade php from version 5.4 to 7.4, and associated php scripts to accommodate php 7.4 to mysql connection changes
+  - add https ssl support
