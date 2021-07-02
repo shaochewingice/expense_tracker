@@ -37,3 +37,6 @@ This web app helps user to record and keep track of daily expenses. It is implem
 
 ​	![](expense_tracker.png)
 
+## Update
+
+July 1, 2021 - upgrade php from version 5.4 to 7.4, and associated php scripts to accommodate php 7.4 to mysql connection changes.
